@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HILLSAFE — Drone-Based Site Intelligence</title>
+  <meta name="description" content="Drone-based site intelligence for a safer, more measurable physical world.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- 3D Canvas Background -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Minimal Brand Header -->
+  <header class="minimal-header">
+    <div class="brand-monogram">
+      <span class="status-glow"></span>
+      <span class="fleet-status">AUTONOMOUS SURVEY PLATFORM</span>
+    </div>
+    <div class="header-right">
+      <button class="sound-toggle" id="btn-sound" title="Toggle Ambience" aria-label="Toggle Sound">
+        <span id="sound-icon">AUDIO OFF</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Center Glassmorphism Box (40% Screen Width, Clean & Ultra-Premium) -->
+  <main class="viewport-center">
+    <div class="glass-card" id="main-glass-card">
+      <div class="glass-reflection"></div>
+
+      <!-- Hill Safe Official Logo Emblem -->
+      <div class="logo-area">
+        <svg class="brand-emblem" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Official Hill Safe Upward Chevron Peak -->
+          <path d="M50 10L10 50L26 66L50 42L74 66L90 50L50 10Z" fill="url(#brandGradPeak)" />
+          <path d="M50 45L28 68L39 79L50 68L61 79L72 68L50 45Z" fill="url(#brandGradInner)" />
+          <path d="M50 72L42 80L50 88L58 80L50 72Z" fill="#00FF88" opacity="0.9" />
+          <defs>
+            <linearGradient id="brandGradPeak" x1="10" y1="10" x2="90" y2="66" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#00C853" />
+              <stop offset="50%" stop-color="#00E676" />
+              <stop offset="100%" stop-color="#69F0AE" />
+            </linearGradient>
+            <linearGradient id="brandGradInner" x1="28" y1="45" x2="72" y2="79" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#008037" />
+              <stop offset="100%" stop-color="#00E676" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <h1 class="brand-title">HILLSAFE</h1>
+      </div>
+
+      <!-- Tagline directly from visiting card -->
+      <p class="brand-tagline">
+        Drone-based site intelligence for a <span class="accent-text">safer, more measurable physical world.</span>
+      </p>
+
+      <div class="space-divider"></div>
+
+      <!-- Modern Space Font Coming Soon -->
+      <div class="launch-section">
+        <h2 class="coming-soon-title">COMING SOON</h2>
+        <p class="coming-soon-caption">Next-generation aerial LiDAR & autonomous terrain analytics.</p>
+      </div>
+
+      <!-- Minimal Enterprise Waitlist Form -->
+      <form class="subscribe-form" id="waitlist-form">
+        <div class="input-container">
+          <input 
+            type="email" 
+            id="email-input" 
+            placeholder="Enter your email for early access" 
+            required 
+            autocomplete="email"
+          />
+          <button type="submit" class="submit-arrow-btn" aria-label="Submit Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+        <div class="form-status" id="form-status"></div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Minimal Discreet Evasion Status Indicator -->
+  <div class="bottom-telemetry">
+    <span class="telemetry-item" id="telemetry-status">LiDAR PATROL // ACTIVE</span>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
